@@ -1,0 +1,7 @@
+{
+  "extends": "@kurocado-studio/style-guide/tsconfig/nestjs",
+  "compilerOptions": {
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*.ts"]
+}
