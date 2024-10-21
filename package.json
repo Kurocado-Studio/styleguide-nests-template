@@ -10,11 +10,10 @@
     "eslint-check": "eslint --max-warnings=0 .",
     "prettier-check": "prettier --check .",
     "prettier-fix": "prettier --check . --write",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
+    "start": "node dist/main",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
-    "test": "vitest"
+    "start:dev": "nest start --watch",
+    "test": "vitest run"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -30,7 +29,7 @@
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
     "@fwouts/vite-tsconfig-paths": "4.2.1",
-    "@kurocado-studio/style-guide": "2.2.0",
+    "@kurocado-studio/style-guide": "^2.2.0",
     "@nestjs/cli": "^10.0.0",
     "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",
