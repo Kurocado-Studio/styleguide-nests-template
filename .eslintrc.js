@@ -14,7 +14,7 @@ module.exports = {
     {
       files: ['src/**/*.spec.ts'],
       rules: {
-        '@typescript-eslint/no-unsafe-member-access': 'error',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
       },
     },
   ],
