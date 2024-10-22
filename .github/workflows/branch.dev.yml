@@ -1,0 +1,11 @@
+name: CI/CD Dev Branch
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    uses: kurocado-studio/styleguide/.github/workflows/composite.deploy.yml@main
+    secrets: inherit
