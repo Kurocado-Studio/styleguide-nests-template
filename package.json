@@ -16,13 +16,8 @@
     "test": "vitest run"
   },
   "lint-staged": {
-    "*": [
-      "pnpm run commitlint",
-      "pnpm run prettier-fix"
-    ],
-    "**/*.{ts,tsx}": [
-      "pnpm run eslint-check"
-    ]
+    "*": ["pnpm run commitlint", "pnpm run prettier-fix"],
+    "**/*.{ts,tsx}": ["pnpm run eslint-check"]
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
