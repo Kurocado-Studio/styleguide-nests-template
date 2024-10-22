@@ -37,6 +37,7 @@ jobs:
       github.ref == 'refs/heads/main'
 
   deploy:
+    needs: release
     name: Deploy app
     runs-on: ubuntu-latest
     concurrency: deploy-group
