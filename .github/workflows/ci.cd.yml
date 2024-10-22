@@ -19,7 +19,7 @@ jobs:
 
   document:
     needs: test
-    uses: kurocado-studio/styleguide/.github/workflows/writerside-documentation@main
+    uses: kurocado-studio/styleguide/.github/workflows/writerside-documentation.yml@main
     secrets: inherit
 
   release:
