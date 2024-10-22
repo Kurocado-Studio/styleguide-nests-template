@@ -10,4 +10,12 @@ module.exports = {
     amd: true,
     node: true,
   },
+  overrides: [
+    {
+      files: ['src/**/*.spec.ts'],
+      rules: {
+        '@typescript-eslint/no-unsafe-member-access': 'error',
+      },
+    },
+  ],
 };
