@@ -14,28 +14,18 @@ on:
       - dev
 
 jobs:
-  lint:
-    uses: kurocado-studio/styleguide/.github/workflows/composite.lint.yml@main
+  ci-cd:
+    runs-on: ubuntu-latest
     secrets: inherit
-
-  test:
-    needs: lint
-    uses: kurocado-studio/styleguide/.github/workflows/composite.test.yml@main
-    secrets: inherit
-
-  document:
-    needs: test
-    uses: kurocado-studio/styleguide/.github/workflows/composite.document.yml@main
-    secrets: inherit
-
-  release:
-    needs: document
-    uses: kurocado-studio/styleguide/.github/workflows/composite.release.yml@main
-    secrets: inherit
+    steps:
+      - uses: kurocado-studio/styleguide/.github/workflows/composite.lint.yml@main
+      - uses: kurocado-studio/styleguide/.github/workflows/composite.test.yml@main
+      - uses: kurocado-studio/styleguide/.github/workflows/composite.document.yml@main
+      - uses: kurocado-studio/styleguide/.github/workflows/composite.release.yml@main
 
   deploy:
-    needs: release
-    name: Deploy app
+    needs: ci-cd
+    name: Deploy
     runs-on: ubuntu-latest
     concurrency: deploy-group
     if: |
