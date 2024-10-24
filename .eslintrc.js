@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [require.resolve('@kurocado-studio/style-guide/eslint/node')],
+  extends: [require.resolve('@kurocado-studio/styleguide/eslint/node')],
   parserOptions: {
     ecmaVersion: 2020,
     project: true,
