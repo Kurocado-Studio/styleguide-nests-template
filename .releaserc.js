@@ -1,1 +1,1 @@
-module.exports = require.resolve('@kurocado-studio/style-guide/release/app');
+module.exports = require.resolve('@kurocado-studio/styleguide/release/app');

@@ -1,5 +1,5 @@
 {
-  "extends": "@kurocado-studio/style-guide/tsconfig/nestjs",
+  "extends": "@kurocado-studio/styleguide/tsconfig/nestjs",
   "compilerOptions": {
     "types": ["vitest/globals"],
     "outDir": "./dist",
