@@ -4,5 +4,5 @@ codesanbox
 devcontainer
 dist
 node_modules
-vitest.config.ts
+vite.config.ts
 

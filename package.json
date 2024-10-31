@@ -25,20 +25,19 @@
     ]
   },
   "dependencies": {
+    "@kurocado-studio/styleguide": "1.3.0-alpha.2",
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
     "@octopusdeploy/step-package-cli": "4.0.2",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
-    "unplugin-swc": "1.5.1",
-    "vite-tsconfig-paths": "5.0.1"
+    "unplugin-swc": "1.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
     "@fwouts/vite-tsconfig-paths": "4.2.1",
-    "@kurocado-studio/styleguide": "1.2.3-alpha.3",
     "@nestjs/cli": "^10.0.0",
     "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",
