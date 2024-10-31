@@ -37,3 +37,5 @@ jobs:
     needs: release
     uses: kurocado-studio/styleguide/.github/workflows/workflow.deploy.yml@main
     secrets: inherit
+    with:
+      branch_name: ${{ github.ref }}
