@@ -1,9 +1,24 @@
 {
-  "extends": "@kurocado-studio/styleguide/tsconfig/nestjs",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": [
+    "@kurocado-studio/qa/nestjs/tsconfig.qa",
+    "@kurocado-studio/styleguide/nestjs/tsconfig"
+  ],
   "compilerOptions": {
-    "types": ["vitest/globals"],
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "skipLibCheck": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "jsx": "react"
   },
-  "include": ["src/**/*.ts"]
+  "include": [
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "setup.nestjs.ts",
+    "tailwind.config.ts",
+    "test/**/*.test.ts",
+    "test/**/*.test.tsx",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ],
+  "exclude": ["node_modules"]
 }

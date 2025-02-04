@@ -6,4 +6,9 @@
  *
  * Explore our open-source projects: {@link https://github.com/kurocado-studio}
  */
-export { commitLintConfig as default } from '@kurocado-studio/styleguide';
+import {
+  defineESLintConfig,
+  eslintNodeConfig,
+} from '@kurocado-studio/styleguide';
+
+export default defineESLintConfig(eslintNodeConfig);
