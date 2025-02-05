@@ -11,8 +11,8 @@
     "jsx": "react"
   },
   "include": [
-    "app/**/*.ts",
-    "app/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     "setup.nestjs.ts",
     "tailwind.config.ts",
     "test/**/*.test.ts",
