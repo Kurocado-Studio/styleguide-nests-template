@@ -25,11 +25,11 @@
   },
   "lint-staged": {
     "*": [
-      "pnpm run commitlint",
       "pnpm run prettier-fix"
     ],
-    "**/*.{ts,tsx}": [
-      "pnpm run eslint-check"
+    "**/*.ts": [
+      "pnpm run eslint-fix",
+      "pnpm run lint"
     ]
   },
   "dependencies": {
