@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "nest build",
+    "commitlint": "pnpm exec commitlint --edit .git/COMMIT_EDITMSG",
     "eslint-check": "eslint --max-warnings=0 .",
     "prettier-check": "prettier --check .",
     "prettier-fix": "prettier --check . --write",
@@ -16,8 +17,13 @@
     "test": "vitest run"
   },
   "lint-staged": {
-    "*": ["pnpm run commitlint", "pnpm run prettier-fix"],
-    "**/*.{ts,tsx}": ["pnpm run eslint-check"]
+    "*": [
+      "pnpm run prettier-fix"
+    ],
+    "**/*.{ts}": [
+      "pnpm run eslint-fix",
+      "pnpm run lint"
+    ]
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
