@@ -20,7 +20,7 @@
     "*": [
       "pnpm run prettier-fix"
     ],
-    "**/*.{ts}": [
+    "**/*.ts": [
       "pnpm run eslint-fix",
       "pnpm run lint"
     ]
