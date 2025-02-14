@@ -9,6 +9,8 @@
     "build": "nest build",
     "commitlint": "pnpm exec commitlint --edit .git/COMMIT_EDITMSG",
     "eslint-check": "eslint --max-warnings=0 .",
+    "eslint-fix": "eslint --max-warnings=0 . --fix",
+    "lint": "eslint --max-warnings=0 .",
     "prettier-check": "prettier --check .",
     "prettier-fix": "prettier --check . --write",
     "start": "node dist/main",
