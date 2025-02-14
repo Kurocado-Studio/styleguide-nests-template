@@ -54,6 +54,9 @@ importers:
       '@nestjs/testing':
         specifier: ^10.4.15
         version: 10.4.15(@nestjs/common@10.4.15(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.15)(@nestjs/platform-express@10.4.15)
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: ^5.2.2
+        version: 5.2.2(prettier@3.5.1)
       '@types/express':
         specifier: ^4.17.21
         version: 4.17.21
@@ -1208,6 +1211,22 @@ packages:
       prettier: 2.x - 3.x
     peerDependenciesMeta:
       '@vue/compiler-sfc':
+        optional: true
+
+  '@trivago/prettier-plugin-sort-imports@5.2.2':
+    resolution: {integrity: sha512-fYDQA9e6yTNmA13TLVSA+WMQRc5Bn/c0EUBditUHNfMMxN7M82c38b1kEggVE3pLpZ0FwkwJkUEKMiOi52JXFA==}
+    engines: {node: '>18.12'}
+    peerDependencies:
+      '@vue/compiler-sfc': 3.x
+      prettier: 2.x - 3.x
+      prettier-plugin-svelte: 3.x
+      svelte: 4.x || 5.x
+    peerDependenciesMeta:
+      '@vue/compiler-sfc':
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      svelte:
         optional: true
 
   '@types/aria-query@5.0.4':
@@ -6783,6 +6802,18 @@ snapshots:
       '@babel/parser': 7.26.8
       '@babel/traverse': 7.23.2
       '@babel/types': 7.17.0
+      javascript-natural-sort: 0.7.1
+      lodash: 4.17.21
+      prettier: 3.5.1
+    transitivePeerDependencies:
+      - supports-color
+
+  '@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.1)':
+    dependencies:
+      '@babel/generator': 7.26.8
+      '@babel/parser': 7.26.8
+      '@babel/traverse': 7.26.8
+      '@babel/types': 7.26.8
       javascript-natural-sort: 0.7.1
       lodash: 4.17.21
       prettier: 3.5.1
