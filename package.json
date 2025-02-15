@@ -7,17 +7,28 @@
   "license": "MIT",
   "scripts": {
     "build": "nest build",
-    "eslint-check": "eslint --max-warnings=0 .",
+    "commitlint": "pnpm exec commitlint --edit .git/COMMIT_EDITMSG",
+    "eslint-debug": "eslint --max-warnings=0 . --debug",
+    "eslint-fix": "eslint --max-warnings=0 . --fix --no-warn-ignored",
+    "lint": "eslint --max-warnings=0 . --no-warn-ignored",
+    "prepare": "husky install",
     "prettier-check": "prettier --check .",
     "prettier-fix": "prettier --check . --write",
+    "semantic-release": "semantic-release",
     "start": "node dist/main",
     "start:debug": "nest start --debug --watch",
     "start:dev": "nest start --watch",
-    "test": "vitest run"
+    "test": "vitest run --coverage",
+    "typecheck": "tsc"
   },
   "lint-staged": {
-    "*": ["pnpm run commitlint", "pnpm run prettier-fix"],
-    "**/*.{ts,tsx}": ["pnpm run eslint-check"]
+    "*": [
+      "pnpm run prettier-fix"
+    ],
+    "**/*.ts": [
+      "pnpm run eslint-fix",
+      "pnpm run lint"
+    ]
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
