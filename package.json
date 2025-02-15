@@ -18,7 +18,7 @@
     "start": "node dist/main",
     "start:debug": "nest start --debug --watch",
     "start:dev": "nest start --watch",
-    "test": "vitest run --coverage",
+    "test": "vitest run",
     "typecheck": "tsc"
   },
   "lint-staged": {
