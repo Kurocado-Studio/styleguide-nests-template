@@ -12,7 +12,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['src/**/*.spec.ts'],
+      files: ['test/**/*.test.ts'],
       rules: {
         '@typescript-eslint/no-unsafe-member-access': 'off',
       },
