@@ -1,4 +1,13 @@
-name: CI/CD Pipeline
+#
+# Made with ❤️ and adobo by Kurocado Studio
+# Copyright (c) 2024. All Rights Reserved.
+#
+# Learn more about Kurocado Studio: {@link https://www.kurocado.studio}
+#
+# Explore our open-source projects: {@link https://github.com/kurocado-studio}
+#
+
+name: CI/CD
 
 permissions:
   contents: write
@@ -7,49 +16,38 @@ permissions:
   pull-requests: write
 
 on:
-  pull_request:
   push:
     branches:
       - main
       - dev
+  pull_request:
 
 jobs:
   lint:
-    uses: kurocado-studio/dev-ops/.github/workflows/composite.lint.yml@main
+    uses: kurocado-studio/dev-ops/.github/workflows/workflow.lint.yml@main
     secrets: inherit
 
   test:
     needs: lint
-    uses: kurocado-studio/dev-ops/.github/workflows/composite.test.yml@main
+    uses: kurocado-studio/dev-ops/.github/workflows/workflow.test.yml@main
     secrets: inherit
 
   document:
     needs: test
-    uses: kurocado-studio/dev-ops/.github/workflows/composite.document.yml@main
+    uses: kurocado-studio/dev-ops/.github/workflows/workflow.document.yml@main
     secrets: inherit
-
-  release:
-    needs: document
-    uses: kurocado-studio/dev-ops/.github/workflows/composite.release.yml@main
-    secrets: inherit
-    if: |
-      github.event_name == 'push' && 
-      github.ref == 'refs/heads/main'
 
   deploy:
-    needs: release
-    name: Deploy app
-    runs-on: ubuntu-latest
-    concurrency: deploy-group
-    if: |
-      github.event_name == 'push' && 
-      (
-        github.ref == 'refs/heads/main' || 
-        github.ref == 'refs/heads/dev'
-      )
-    steps:
-      - uses: actions/checkout@v4
-      - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
-        env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+    needs: test
+    uses: kurocado-studio/dev-ops/.github/workflows/workflow.deploy.yml@main
+    with:
+      branch_name: ${{ github.ref_name }}
+    secrets:
+      fly_api_token: ${{ secrets.FLY_API_TOKEN }}
+
+  release:
+    needs: test
+    uses: kurocado-studio/dev-ops/.github/workflows/workflow.release.yml@main
+    secrets: inherit
+    with:
+      branch_name: ${{ github.ref_name }}
