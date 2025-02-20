@@ -9,5 +9,4 @@ import { AppService } from './app.service';
   providers: [AppService],
 })
 // NestJS needs it like so
-// eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export class AppModule {}

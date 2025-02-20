@@ -1,9 +1,16 @@
 {
-  "extends": "@kurocado-studio/style-guide/tsconfig/nestjs",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": [
+    "@kurocado-studio/qa/nestjs/tsconfig.qa",
+    "@kurocado-studio/styleguide/nestjs/tsconfig"
+  ],
   "compilerOptions": {
-    "types": ["vitest/globals"],
+    "typeRoots": ["./node_modules/@types"],
+    "lib": ["ESNext"],
+    "moduleResolution": "NodeNext",
+    "types": ["jest", "node"],
     "outDir": "./dist",
     "rootDir": "."
   },
-  "include": ["src/**/*.ts", "test/**/*.test.ts"]
+  "include": ["src/**/*.ts", "test/**/*.test.ts", "setup.nestjs.ts"]
 }
