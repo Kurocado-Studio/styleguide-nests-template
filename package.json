@@ -8,7 +8,7 @@
   "scripts": {
     "build": "nest build",
     "commitlint": "pnpm exec commitlint --edit .git/COMMIT_EDITMSG",
-    "eslint-debug": "eslint --max-warnings=0 . --debug",
+    "dev": "nest start --watch",
     "eslint-fix": "eslint --max-warnings=0 . --fix --no-warn-ignored",
     "lint": "eslint --max-warnings=0 . --no-warn-ignored",
     "prepare": "husky install",
@@ -16,8 +16,6 @@
     "prettier-fix": "prettier --check . --write",
     "semantic-release": "semantic-release",
     "start": "node dist/src/main",
-    "start:debug": "nest start --debug --watch",
-    "start:dev": "nest start --watch",
     "test": "vitest run --coverage",
     "typecheck": "tsc"
   },
