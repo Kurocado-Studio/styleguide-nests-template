@@ -35,7 +35,7 @@
     "@octopusdeploy/step-package-cli": "4.0.2",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
-    "vite-tsconfig-paths": "5.0.1",
+    "vite-tsconfig-paths": "5.1.4",
     "vitest": "^3.0.6"
   },
   "devDependencies": {
