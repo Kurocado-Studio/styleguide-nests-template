@@ -7,7 +7,7 @@
 # Explore our open-source projects: {@link https://github.com/kurocado-studio}
 #
 
-name: CI/CD
+name: CI/CD Pipeline
 
 permissions:
   contents: write
