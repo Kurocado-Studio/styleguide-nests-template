@@ -39,7 +39,7 @@
     "vitest": "^3.0.6"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.7.1",
+    "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@kurocado-studio/qa": "^1.1.1",
     "@kurocado-studio/styleguide": "^2.3.0",
