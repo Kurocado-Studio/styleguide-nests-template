@@ -34,7 +34,7 @@
     "@nestjs/platform-express": "^10.4.15",
     "@octopusdeploy/step-package-cli": "4.0.4",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1",
+    "rxjs": "^7.8.2",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "^3.0.6"
   },
