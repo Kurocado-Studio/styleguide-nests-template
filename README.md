@@ -3,25 +3,9 @@
 [![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/Kurocado-Studio/styleguide-nests-template)
 
 This template is already configured with the
-**[Kurocado Studio Engineering Styleguide](https://kurocado.youtrack.cloud/articles/STY-A-1/Project-Charter)**
-& is designed to help you go from "0 to Hello World" in five minutes or less—delivering both speed
-and quality without compromise.
-
-## Key Features
-
-- [Linting](https://kurocado.youtrack.cloud/articles/PLA-A-5/Lint) pipeline using
-  - [See the config](https://kurocado.youtrack.cloud/articles/STY-A-8/Prettier) for
-    [Prettier](https://prettier.io)
-  - [See the config](https://kurocado.youtrack.cloud/articles/STY-A-10/ESLint) for
-    [ESLint](https://eslint.org)
-  - [See the config](https://kurocado.youtrack.cloud/articles/STY-A-12/CommitLint) for
-    [CommitLint](https://commitlint.js.org)
-- [Testing](https://kurocado.youtrack.cloud/articles/PLA-A-6/Test) pipeline using
-  [Vitest](https://vitest.dev)
-- [Release](https://kurocado.youtrack.cloud/articles/PLA-A-3/Release) pipeline using
-  [Semantic Release](https://semantic-release.gitbook.io/semantic-release)
-- [Deployment](https://kurocado.youtrack.cloud/articles/PLA-A-4/Deploy) pipeline using
-  [Fly.io](https://fly.io/)
+[engineering styleguide](https://kurocado-studio.github.io/styleguide) & is designed to help you go
+from "0 to Hello World" in five minutes or less—delivering both speed and quality without
+compromise.
 
 ### Prerequisites
 
@@ -86,24 +70,25 @@ Use the [Documentation](https://kurocado.youtrack.cloud/articles/PLA-A-7/Documen
 - Add the workflow to the main `ci.yaml` file, here is an example:
 
   ```yaml
-  # rest of config
+  name: CI/CD Pipeline
 
   permissions:
-  contents: write
-  pages: write
-  id-token: write
+    contents: write
+    id-token: write
+    pages: write
+    pull-requests: write
 
   jobs:
-    # other jobs placeholder
-
     document:
+      needs: lint
       uses: kurocado-studio/dev-ops/.github/workflows/workflow.document.yml@main
-      secrets: inherit
-
-    # other jobs placeholder
+      secrets:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        instance_id: dcs
   ```
 
-- This will enable the [Documentation](https://kurocado.youtrack.cloud/articles/PLA-A-7/Document)
+- This will enable the [Documentation](https://kurocado-studio.github.io/dev-ops/document.html)
   pipeline
 
 ## What's next?
