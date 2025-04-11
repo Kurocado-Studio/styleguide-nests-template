@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@nestjs/common": "^11.0.12",
+    "@nestjs/common": "^11.0.15",
     "@nestjs/core": "^10.4.15",
     "@nestjs/platform-express": "^10.4.15",
     "@octopusdeploy/step-package-cli": "4.0.4",
