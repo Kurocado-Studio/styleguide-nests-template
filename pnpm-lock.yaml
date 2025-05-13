@@ -37,14 +37,14 @@ importers:
         specifier: ^19.8.1
         version: 19.8.1(@types/node@22.14.1)(typescript@5.8.3)
       '@commitlint/config-conventional':
-        specifier: ^19.8.0
-        version: 19.8.0
+        specifier: ^19.8.1
+        version: 19.8.1
       '@kurocado-studio/qa':
         specifier: ^1.1.4
         version: 1.1.4(@swc/core@1.11.18)(@testing-library/dom@10.4.0)(@types/debug@4.1.12)(@types/react@19.1.0)(@vitest/ui@3.1.3)(eslint@9.26.0(jiti@2.4.2))(jiti@2.4.2)(optionator@0.9.4)(prettier@3.5.3)(react@18.3.1)(rollup@2.60.2)(terser@5.39.0)(vite@6.3.5(@types/node@22.14.1)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1))(vitest-axe@0.1.0(vitest@3.0.6))(yaml@2.7.1)
       '@kurocado-studio/styleguide':
         specifier: ^2.5.2
-        version: 2.5.2(ed5f3qxxla32imxdhoajgo3koe)
+        version: 2.5.2(itpi7e2n7ksv7semmurfyzwfzy)
       '@nestjs/cli':
         specifier: ^11.0.7
         version: 11.0.7(@swc/core@1.11.18)(@types/node@22.14.1)(esbuild@0.17.6)
@@ -372,8 +372,8 @@ packages:
     engines: {node: '>=v18'}
     hasBin: true
 
-  '@commitlint/config-conventional@19.8.0':
-    resolution: {integrity: sha512-9I2kKJwcAPwMoAj38hwqFXG0CzS2Kj+SAByPUQ0SlHTfb7VUhYVmo7G2w2tBrqmOf7PFd6MpZ/a1GQJo8na8kw==}
+  '@commitlint/config-conventional@19.8.1':
+    resolution: {integrity: sha512-/AZHJL6F6B/G959CsMAzrPKKZjeEiAVifRyEwXxcT6qtqbPwGw+iQxmNS+Bu+i09OCtdNRW6pNpBvgPrtMr9EQ==}
     engines: {node: '>=v18'}
 
   '@commitlint/config-validator@19.8.1':
@@ -430,10 +430,6 @@ packages:
 
   '@commitlint/top-level@19.8.1':
     resolution: {integrity: sha512-Ph8IN1IOHPSDhURCSXBz44+CIu+60duFwRsg6HqaISFHQHbmBtxVw4ZrFNIYUzEP7WwrNPxa2/5qJ//NK1FGcw==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/types@19.8.0':
-    resolution: {integrity: sha512-LRjP623jPyf3Poyfb0ohMj8I3ORyBDOwXAgxxVPbSD0unJuW2mJWeiRfaQinjtccMqC5Wy1HOMfa4btKjbNxbg==}
     engines: {node: '>=v18'}
 
   '@commitlint/types@19.8.1':
@@ -7964,9 +7960,9 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@commitlint/config-conventional@19.8.0':
+  '@commitlint/config-conventional@19.8.1':
     dependencies:
-      '@commitlint/types': 19.8.0
+      '@commitlint/types': 19.8.1
       conventional-changelog-conventionalcommits: 7.0.2
 
   '@commitlint/config-validator@19.8.1':
@@ -8055,11 +8051,6 @@ snapshots:
   '@commitlint/top-level@19.8.1':
     dependencies:
       find-up: 7.0.0
-
-  '@commitlint/types@19.8.0':
-    dependencies:
-      '@types/conventional-commits-parser': 5.0.1
-      chalk: 5.4.1
 
   '@commitlint/types@19.8.1':
     dependencies:
@@ -8637,11 +8628,11 @@ snapshots:
       - vue-tsc
       - yaml
 
-  '@kurocado-studio/styleguide@2.5.2(ed5f3qxxla32imxdhoajgo3koe)':
+  '@kurocado-studio/styleguide@2.5.2(itpi7e2n7ksv7semmurfyzwfzy)':
     dependencies:
       '@babel/eslint-parser': 7.27.0(@babel/core@7.27.1)(eslint@9.26.0(jiti@2.4.2))
       '@commitlint/cli': 19.8.1(@types/node@22.14.1)(typescript@5.8.3)
-      '@commitlint/config-conventional': 19.8.0
+      '@commitlint/config-conventional': 19.8.1
       '@eslint/js': 9.26.0
       '@remix-run/dev': 2.16.5(@remix-run/react@2.16.5(react-dom@18.2.0(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(@types/node@22.14.1)(jiti@2.4.2)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.5(@types/node@22.14.1)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
       '@rushstack/eslint-patch': 1.11.0
