@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.1",
     "@kurocado-studio/qa": "^1.1.4",
     "@kurocado-studio/styleguide": "^2.5.2",
     "@nestjs/cli": "^11.0.7",
